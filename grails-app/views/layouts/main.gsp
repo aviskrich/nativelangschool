@@ -16,29 +16,10 @@
     <link rel="apple-touch-icon" href="${resource(dir: 'images', file: 'apple-touch-icon.png')}">
     <link rel="apple-touch-icon" sizes="114x114" href="${resource(dir: 'images', file: 'apple-touch-icon-retina.png')}">
 
-
-    %{--<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>--}%
-
-    %{--<link rel="script" href="<g:createLinkTo dir='js' file='bootstrap.js'/>"/>--}%
-    %{--<link rel="script" href="<g:createLinkTo dir='datepicker' file='bootstrap-datepicker.js'/>"/>--}%
-    %{--<link rel="script" href="<g:createLinkTo dir='datepicker' file='bootstrap-datepicker.ru.js'/>"/>--}%
-
-    %{--<link rel="stylesheet" href="<g:createLinkTo dir='css' file='bootstrap.min.css'/>"/>--}%
     <link rel="stylesheet" href="<g:createLinkTo dir='dir' file='pagination.css'/>"/>
-    %{--<link rel="stylesheet" href="<g:createLinkTo dir='css' file='datepicker3.css'/>"/>--}%
 
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://eternicode.github.io/bootstrap-datepicker/bootstrap-datepicker/css/datepicker3.css">
-
-    %{--<link rel="script" href="<g:createLinkTo dir='dir' file='jquery-1.9.1.min.js'/>"/>--}%
-    %{--<link rel="script" href="<g:createLinkTo dir='dir' file='bootstrap.min.js'/>"/>--}%
-    %{--<link rel="script" href="<g:createLinkTo dir='dir' file='bootstrap-datepicker.js'/>"/>--}%
-    %{--<link rel="script" href="<g:createLinkTo dir='dir' file='bootstrap-datepicker.ru.js'/>"/>--}%
-
-    %{--<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>--}%
-    %{--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>--}%
-    %{--<script src="http://eternicode.github.io/bootstrap-datepicker/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>--}%
-    %{--<script src="http://eternicode.github.io/bootstrap-datepicker/bootstrap-datepicker/js/locales/bootstrap-datepicker.ru.js"></script>--}%
 
     <script src="<g:createLinkTo dir='dir' file='jquery-1.9.1.min.js'/>"></script>
     <script src="<g:createLinkTo dir='dir' file='bootstrap.min.js'/>"></script>
@@ -47,28 +28,6 @@
 
     %{--<script src="<g:createLinkTo dir='dir' file='formatter.min.js'/>"></script>--}%
     <script src="<g:createLinkTo dir='dir' file='jquery.formatter.min.js'/>"></script>
-
-
-    %{--<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.js"></script>--}%
-    %{--<script src="https://code.angularjs.org/1.0.8/i18n/angular-locale_ru-ru.js"></script>--}%
-    %{--<script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>--}%
-
-
-    %{--<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>--}%
-    %{--<script src="//code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>--}%
-
-    <!-- Bootstrap -->
-
-
-
-    %{--<g:javascript/>--}%
-
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
       <g:layoutHead/>
     <!--<r:layoutResources/>-->
     <![endif]-->
@@ -123,23 +82,9 @@
                         </sec:ifAllGranted>
                         <sec:ifAnyGranted roles="ROLE_ADMIN,ROLE_USER">
                             <li>
-                                <g:link controller="timeTable" action="index" href="#">Расписание</g:link>
+                                <g:link controller="teacher" action="timetable" href="#">Расписание</g:link>
                             </li>
                         </sec:ifAnyGranted>
-                    %{--<li class="dropdown">--}%
-                    %{--<a href="#" class="dropdown-toggle" data-toggle="dropdown">Логи <span--}%
-                    %{--class="caret"></span>--}%
-                    %{--</a>--}%
-                    %{--<ul class="dropdown-menu" role="menu">--}%
-                    %{--<li><g:link controller="dblog">Посмотреть логи</g:link></li>--}%
-                    %{--<li><a href="#">Настроить</a></li>--}%
-                    %{--<li><a href="#">Something else here</a></li>--}%
-                    %{--<li class="divider"></li>--}%
-                    %{--<li><a href="#">Separated link</a></li>--}%
-                    %{--<li class="divider"></li>--}%
-                    %{--<li><a href="#">One more separated link</a></li>--}%
-                    %{--</ul>--}%
-                    %{--</li>--}%
                     </ul>
 
 

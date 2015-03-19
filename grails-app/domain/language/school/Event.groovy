@@ -1,11 +1,13 @@
 package language.school
 
+import org.bson.types.ObjectId
+
 class Event {
 
-    Teacher teacher;
-    List<Student> studentList;
-    Date eventDateTime;
-    String eventName;
+    ObjectId id;
+    String name;
+    Date timeBegin;
+    Date timeEnd;
 
 
 
