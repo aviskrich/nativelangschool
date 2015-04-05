@@ -118,28 +118,24 @@
                         <sec:ifAllGranted roles="ROLE_ADMIN">
                             <li>
                                 <g:link controller="admin" action="userList"
-                                        href="#">Пользователи</g:link>
+                                            href="#">Пользователи</g:link>
                             </li>
                         </sec:ifAllGranted>
-                        <sec:ifAnyGranted roles="ROLE_ADMIN,ROLE_USER">
+                        <sec:ifAnyGranted roles="ROLE_ADMIN,ROLE_USER,Teacher">
                             <li>
                                 <g:link controller="timeTable" action="index" href="#">Расписание</g:link>
                             </li>
                         </sec:ifAnyGranted>
-                    %{--<li class="dropdown">--}%
-                    %{--<a href="#" class="dropdown-toggle" data-toggle="dropdown">Логи <span--}%
-                    %{--class="caret"></span>--}%
-                    %{--</a>--}%
-                    %{--<ul class="dropdown-menu" role="menu">--}%
-                    %{--<li><g:link controller="dblog">Посмотреть логи</g:link></li>--}%
-                    %{--<li><a href="#">Настроить</a></li>--}%
-                    %{--<li><a href="#">Something else here</a></li>--}%
-                    %{--<li class="divider"></li>--}%
-                    %{--<li><a href="#">Separated link</a></li>--}%
-                    %{--<li class="divider"></li>--}%
-                    %{--<li><a href="#">One more separated link</a></li>--}%
-                    %{--</ul>--}%
-                    %{--</li>--}%
+                        <sec:ifLoggedIn>
+                            <li>
+                                <g:link controller="profile" action="editProfile">Профиль</g:link>
+                            </li>
+                        </sec:ifLoggedIn>
+                        <sec:ifLoggedIn>
+                            <li>
+                                <g:link controller="event" action="events">Мероприятия</g:link>
+                            </li>
+                        </sec:ifLoggedIn>
                     </ul>
 
 
@@ -149,6 +145,7 @@
                         </a></li></sec:ifLoggedIn>
                         <sec:ifLoggedIn><li><g:link controller="logout">Выйти</g:link></li></sec:ifLoggedIn>
                         <sec:ifNotLoggedIn><li><g:link controller="login">Войти</g:link></li></sec:ifNotLoggedIn>
+                        <sec:ifNotLoggedIn><li><g:link controller="register" action="createUser">Регистрация</g:link></li></sec:ifNotLoggedIn>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </nav>

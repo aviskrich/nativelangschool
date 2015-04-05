@@ -1,5 +1,3 @@
-
-
 import language.school.security.Role
 import language.school.security.User
 import language.school.security.UserRole
